@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.mobileshop.controller.DashBoardController">
+   <children>
+      <Label prefHeight="650.0" prefWidth="156.0" style="-fx-background-color: #f5f6fa;" />
+      <JFXButton buttonType="RAISED" layoutX="6.0" layoutY="4.0" onAction="#btnHome" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="           Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <ImageView fitHeight="45.0" fitWidth="73.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-home-page-64.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="6.0" layoutY="395.0" onAction="#btnSupplier" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="  Supplier" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-supplier-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="5.0" layoutY="330.0" onAction="#btnOrder" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="     Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-mobile-order-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="5.0" layoutY="266.0" onAction="#btnEmployee" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="Employee" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-customer-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="5.0" layoutY="200.0" onAction="#btnItem" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="        Item" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-sell-stock-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="6.0" layoutY="134.0" onAction="#btnPayment" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="Payment" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-mobile-payment-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="6.0" layoutY="69.0" onAction="#btnCustomer" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-add-user-group-woman-man-30%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="6.0" layoutY="460.0" onAction="#btnRepair" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="    Repair" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-phonelink-setup-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="5.0" layoutY="590.0" onAction="#btnLogOut" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="  LogOut" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-log-out-32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="AllContext" layoutX="154.0" prefHeight="650.0" prefWidth="802.0" style="-fx-background-color: #4b7bec;" />
+      <Label layoutX="954.0" prefHeight="650.0" prefWidth="156.0" style="-fx-background-color: #ffffff;" />
+      <Label alignment="CENTER" layoutX="970.0" layoutY="17.0" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #a55eea;" text="D" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="968.0" layoutY="110.0" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #a55eea;" text="U" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="968.0" layoutY="384.0" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #a55eea;" text="N" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="969.0" layoutY="294.0" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #a55eea;" text="I" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="968.0" layoutY="198.0" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #a55eea;" text="M" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="966.0" layoutY="472.0" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #a55eea;" text="D" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="966.0" layoutY="562.0" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #a55eea;" text="U" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="49.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="5.0" layoutY="524.0" onAction="#btnReload" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #a55eea;" text="     Reload" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-reload-67%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

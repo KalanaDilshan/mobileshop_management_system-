@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.mobileshop.controller.PaymentFormController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="8.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane layoutY="-8.0" prefHeight="650.0" prefWidth="800.0" styleClass="dashboard-colour2">
+               <children>
+                  <AnchorPane layoutX="18.0" layoutY="17.0" prefHeight="616.0" prefWidth="768.0" style="-fx-background-color: white;" styleClass="button-" stylesheets="@../../../../../../Desktop/src/style/styles.css">
+                     <children>
+                        <JFXTextField fx:id="txtCustid" focusColor="#1b08eb" labelFloat="true" layoutX="22.0" layoutY="192.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="172.0" promptText="Cust id" text="C0-">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txtPrice" focusColor="#1b08eb" labelFloat="true" layoutX="565.0" layoutY="192.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="181.0" promptText="Price">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txtOrderid" focusColor="#1b08eb" labelFloat="true" layoutX="342.0" layoutY="121.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="181.0" promptText="Order Id" text="Or-">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txtPaymentid" focusColor="#1b08eb" labelFloat="true" layoutX="20.0" layoutY="122.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="172.0" promptText="Payment Id" text="Pa-">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXTextField>
+                        <JFXButton layoutX="204.0" layoutY="114.0" onAction="#btnSearch" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../../../../Desktop/src/style/styles.css" text="Search" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="btn-Search" />
+                              <String fx:value="button-" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton fx:id="txtSave" layoutX="169.0" layoutY="254.0" onAction="#PaymentSave" prefHeight="31.0" prefWidth="170.0" style="-fx-background-color: #4cd137;" styleClass="button2" text="Save">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="txtUpdate" layoutX="379.0" layoutY="255.0" onAction="#PaymentUpdate" prefHeight="31.0" prefWidth="170.0" style="-fx-background-color: #ff6b6b;" styleClass="button2" text="Update">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="txtDelete" layoutX="587.0" layoutY="253.0" onAction="#PaymentDelete" prefHeight="31.0" prefWidth="170.0" style="-fx-background-color: #00a8ff;" styleClass="button2" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="txtDate" focusColor="#1b08eb" labelFloat="true" layoutX="344.0" layoutY="195.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="181.0" promptText="Date">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txtRepairid" focusColor="#1b08eb" labelFloat="true" layoutX="563.0" layoutY="121.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="181.0" promptText="Repir id" text="Re-">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXTextField>
+                     </children>
+                  </AnchorPane>
+                  <Label alignment="CENTER" layoutX="26.0" layoutY="21.0" prefHeight="71.0" prefWidth="754.0" text="Payment" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="50.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="dashboard-colour2" />
+                        <String fx:value="button2--" />
+                     </styleClass>
+                     <stylesheets>
+                        <URL value="@../../../../../Desktop/src/style/styles.css" />
+                        <URL value="@../style/style.css" />
+                     </stylesheets>
+                  </Label>
+                  <TableView fx:id="tblPayment" layoutX="24.0" layoutY="379.0" prefHeight="214.0" prefWidth="754.0">
+                     <columns>
+                        <TableColumn fx:id="colPaymentId" prefWidth="119.0" text="Payment Id" />
+                        <TableColumn fx:id="colOrderId" prefWidth="132.0" text="Customer Id" />
+                        <TableColumn fx:id="colCustId" prefWidth="125.0" text="Order Id" />
+                        <TableColumn fx:id="colDate" prefWidth="118.0" text="Date" />
+                        <TableColumn fx:id="colRepairId" prefWidth="94.0" text="repair id" />
+                        <TableColumn fx:id="colPrice" prefWidth="165.0" text="Price" />
+                     </columns>
+                     <stylesheets>
+                        <URL value="@../../../../../Desktop/src/style/styles.css" />
+                        <URL value="@../style/style.css" />
+                     </stylesheets>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="331.0" prefHeight="43.0" prefWidth="754.0" styleClass="dashboard-colour2" text="Payment Details" textFill="#f8f4f4">
+                     <font>
+                        <Font name="ADDINGTON Regular" size="22.0" />
+                     </font>
+                     <stylesheets>
+                        <URL value="@../../../../../Desktop/src/style/styles.css" />
+                        <URL value="@../style/style.css" />
+                     </stylesheets>
+                  </Label>
+                  <JFXButton fx:id="txtSave1" layoutX="591.0" layoutY="36.0" onAction="#btnprint" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #f5f6fa;" styleClass="button2" text="Report">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

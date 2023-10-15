@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderancorpane" prefHeight="650.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.mobileshop.controller.OrderDetailsFormController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="805.0" styleClass="dashboard-colour2">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="12.0" prefHeight="623.0" prefWidth="783.0" style="-fx-background-color: white;" styleClass="button-" stylesheets="@../../../../../../Desktop/src/style/styles.css" />
+            <Label alignment="CENTER" layoutX="19.0" layoutY="17.0" prefHeight="67.0" prefWidth="770.0" text="Order Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="dashboard-colour2" />
+                  <String fx:value="button2--" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </Label>
+            <TableView fx:id="tblOrderDetails" layoutX="19.0" layoutY="165.0" prefHeight="405.0" prefWidth="764.0" stylesheets="@../style/style.css">
+               <columns>
+                  <TableColumn fx:id="colItemId" prefWidth="99.0" text="Item Id" />
+                  <TableColumn fx:id="colOderId" prefWidth="110.0" text="Order Id" />
+                  <TableColumn fx:id="ColCustId" prefWidth="135.0" text="Customer Id" />
+                  <TableColumn fx:id="colDate" prefWidth="152.0" text="Date" />
+                  <TableColumn fx:id="colQty" prefWidth="79.0" text="Qty" />
+                  <TableColumn fx:id="colPrice" prefWidth="188.0" text="Price" />
+               </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+            <JFXButton fx:id="orderDetails" layoutX="604.0" layoutY="27.0" onAction="#btnprintorder" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #f5f6fa;" styleClass="button2" text="Report">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <stylesheets>
+            <URL value="@../../../../../Desktop/src/style/styles.css" />
+            <URL value="@../style/style.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

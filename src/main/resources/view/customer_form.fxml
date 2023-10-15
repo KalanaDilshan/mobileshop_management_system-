@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.mobileshop.controller.CustomerFormController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="800.0" styleClass="dashboard-colour2">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="19.0" prefHeight="620.0" prefWidth="758.0" style="-fx-background-color: white;" styleClass="button-" stylesheets="@../../../../../../Desktop/src/style/styles.css">
+               <children>
+                  <JFXTextField fx:id="txtCusName" focusColor="#1b08eb" labelFloat="true" layoutX="49.0" layoutY="192.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="187.0" promptText="Name">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtCusAddress" focusColor="#1b08eb" labelFloat="true" layoutX="501.0" layoutY="192.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="193.0" promptText="Address">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtCusContact" focusColor="#1b08eb" labelFloat="true" layoutX="495.0" layoutY="117.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="193.0" promptText="Contact">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtCusId" focusColor="#1b08eb" labelFloat="true" layoutX="51.0" layoutY="124.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="193.0" promptText="Customer Id" text="C0-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXButton layoutX="261.0" layoutY="116.0" onAction="#btnSearch" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../../../../Desktop/src/style/styles.css" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btn-Search" />
+                        <String fx:value="button-" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton layoutX="176.0" layoutY="251.0" onAction="#CusSave" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #4cd137;" styleClass="button2" text="Save">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="380.0" layoutY="252.0" onAction="#CusUpdate" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #ff6b6b;" styleClass="button2" text="Update">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="581.0" layoutY="251.0" onAction="#CusDelete" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #00a8ff;" styleClass="button2" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="4.0" prefHeight="71.0" prefWidth="745.0" text="Customers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="50.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="dashboard-colour2" />
+                        <String fx:value="button2--" />
+                     </styleClass>
+                     <stylesheets>
+                        <URL value="@../../../../../Desktop/src/style/styles.css" />
+                        <URL value="@../style/style.css" />
+                     </stylesheets>
+                  </Label>
+                  <JFXButton layoutX="568.0" layoutY="15.0" onAction="#cusPrint" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #f5f6fa;" styleClass="button2" stylesheets="@../style/style.css" text="Report">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="tblCustomers1" layoutX="22.0" layoutY="379.0" prefHeight="215.0" prefWidth="745.0">
+               <columns>
+                  <TableColumn fx:id="colCustomerId1" prefWidth="116.0" text="Customer Id" />
+                  <TableColumn fx:id="colCusName1" prefWidth="210.0" text="Name" />
+                  <TableColumn fx:id="colCusContact1" prefWidth="179.0" text="Contact" />
+                  <TableColumn fx:id="colCusAddress1" prefWidth="239.0" text="Address" />
+               </columns>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </TableView>
+            <Label alignment="CENTER" layoutX="21.0" layoutY="331.0" prefHeight="43.0" prefWidth="745.0" styleClass="dashboard-colour2" text="Customer Details" textFill="#f8f4f4">
+               <font>
+                  <Font name="ADDINGTON Regular" size="22.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </Label>
+         </children>
+         <stylesheets>
+            <URL value="@../../../../../Desktop/src/style/styles.css" />
+            <URL value="@../style/style.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

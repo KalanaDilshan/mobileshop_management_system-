@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.mobileshop.controller.ItemStockFormController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="800.0" styleClass="dashboard-colour2">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="620.0" prefWidth="775.0" styleClass="button-" stylesheets="@../../../../../../Desktop/src/style/styles.css">
+               <style>-fx-background-color: white;</style>
+               <children>
+                  <JFXTextField fx:id="txtItemStockQty" focusColor="#1b08eb" labelFloat="true" layoutX="472.0" layoutY="123.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="180.0" promptText="Qty">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtItemId" focusColor="#1b08eb" labelFloat="true" layoutX="61.0" layoutY="123.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="170.0" promptText="Item Id" text="It-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton layoutX="258.0" layoutY="114.0" onAction="#btnSearch" prefHeight="40.0" prefWidth="120.0" stylesheets="@../../../../../../Desktop/src/style/styles.css" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btn-Search" />
+                        <String fx:value="button-" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton fx:id="ItemSave" layoutX="187.0" layoutY="250.0" onAction="#btnItemSave" prefHeight="31.0" prefWidth="170.0" style="-fx-background-color: #4cd137;" styleClass="button2" text="Save">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="ItemUpdate" layoutX="390.0" layoutY="250.0" onAction="#btnItemUpdate" prefHeight="31.0" prefWidth="170.0" style="-fx-background-color: #ff6b6b;" styleClass="button2" text="Update">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="ItemDelete" layoutX="594.0" layoutY="249.0" onAction="#btnItemDelete" prefHeight="31.0" prefWidth="170.0" style="-fx-background-color: #00a8ff;" styleClass="button2" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtItemName" focusColor="#1b08eb" labelFloat="true" layoutX="469.0" layoutY="188.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="187.0" promptText="Item_Name">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtUnitPrice" focusColor="#1b08eb" labelFloat="true" layoutX="62.0" layoutY="186.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="170.0" promptText="unit price">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutX="24.0" layoutY="20.0" prefHeight="71.0" prefWidth="757.0" text="Item Stock" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="dashboard-colour2" />
+                  <String fx:value="button2--" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </Label>
+            <TableView fx:id="tblItemStock" layoutX="25.0" layoutY="393.0" prefHeight="205.0" prefWidth="757.0">
+               <columns>
+                  <TableColumn fx:id="colItemStockId" prefWidth="161.0" text="Item Id" />
+                  <TableColumn fx:id="colItemQty" prefWidth="126.0" text="Qty" />
+                  <TableColumn fx:id="colItemName" prefWidth="253.0" text="Item_Name" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="216.0" text="unit price" />
+               </columns>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </TableView>
+            <Label alignment="CENTER" layoutX="23.0" layoutY="323.0" prefHeight="60.0" prefWidth="757.0" styleClass="dashboard-colour2" text="Stock Details" textFill="#f8f4f4">
+               <font>
+                  <Font name="ADDINGTON Regular" size="22.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </Label>
+            <JFXButton fx:id="ItemSave1" layoutX="592.0" layoutY="34.0" onAction="#btnprint" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #f5f6fa;" styleClass="button2" text="Report">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <stylesheets>
+            <URL value="@../../../../../Desktop/src/style/styles.css" />
+            <URL value="@../style/style.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

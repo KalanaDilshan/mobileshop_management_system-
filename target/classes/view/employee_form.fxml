@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.mobileshop.controller.EmployeeFormController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="800.0" styleClass="dashboard-colour2">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="5.0" prefHeight="630.0" prefWidth="779.0" styleClass="button-">
+               <style>-fx-background-color: white;</style>
+               <children>
+                  <JFXTextField fx:id="txtEmpName" focusColor="#1b08eb" labelFloat="true" layoutX="354.0" layoutY="137.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="178.0" promptText="Name">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="txtEmpId" focusColor="#1b08eb" labelFloat="true" layoutX="17.0" layoutY="141.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="160.0" promptText="Employee Id" text="Em-">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXButton fx:id="txtEmpsave" layoutX="189.0" layoutY="254.0" onAction="#EmpSave" prefHeight="31.0" prefWidth="170.0" styleClass="button2" text="Save">
+                     <style>-fx-background-color: #4cd137;</style>
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="txtEmpupdate" layoutX="393.0" layoutY="253.0" onAction="#Empupdate" prefHeight="31.0" prefWidth="170.0" styleClass="button2" text="Update">
+                     <style>-fx-background-color: #ff6b6b;</style>
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="txtEmpdelete" layoutX="599.0" layoutY="253.0" onAction="#Empdelete" prefHeight="30.0" prefWidth="170.0" styleClass="button2" text="Delete">
+                     <style>-fx-background-color: #00a8ff;</style>
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtEmpSallary" focusColor="#1b08eb" labelFloat="true" layoutX="587.0" layoutY="136.0" onKeyPressed="#txtKeyPress" prefHeight="31.0" prefWidth="178.0" promptText="Sallary">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></JFXTextField>
+                  <JFXButton layoutX="196.0" layoutY="135.0" onAction="#btnSearch" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../../../../Desktop/src/style/styles.css" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btn-Search" />
+                        <String fx:value="button-" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutX="18.0" layoutY="9.0" prefHeight="71.0" prefWidth="765.0" text="Employee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="dashboard-colour2" />
+                  <String fx:value="button2--" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </Label>
+            <TableView fx:id="tblCustomers" layoutX="19.0" layoutY="384.0" prefHeight="214.0" prefWidth="765.0">
+               <columns>
+                  <TableColumn fx:id="colCustomerId" prefWidth="189.0" text="Employee Id" />
+                  <TableColumn fx:id="colCusName" prefWidth="310.0" text="Name" />
+                  <TableColumn fx:id="colSalary" minWidth="0.0" prefWidth="265.0" text="Sallary" />
+               </columns>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </TableView>
+            <Label alignment="CENTER" layoutX="17.0" layoutY="329.0" prefHeight="50.0" prefWidth="765.0" styleClass="dashboard-colour2" text="Employee Details" textFill="#f8f4f4">
+               <font>
+                  <Font name="ADDINGTON Regular" size="22.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/src/style/styles.css" />
+                  <URL value="@../style/style.css" />
+               </stylesheets>
+            </Label>
+            <JFXButton layoutX="605.0" layoutY="23.0" onAction="#empPrint" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #f5f6fa;" styleClass="button2" text="Report">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <stylesheets>
+            <URL value="@../../../../../Desktop/src/style/styles.css" />
+            <URL value="@../style/style.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>
